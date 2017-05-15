@@ -17,14 +17,16 @@ class EnquiryController extends Controller
             'message' => 'required|string',
         ]);
 
-        return 'heelo';
+
 
         $newEnquiry =  new Enquiry();
         $newEnquiry->name = $request->get('name');
         $newEnquiry->email = $request->get('email');
         $newEnquiry->message = $request->get('message');
         $newEnquiry->save();
-        
+
+        return $newEnquiry;
+
         return redirect(url(route('enquiry-success')));
 
 
