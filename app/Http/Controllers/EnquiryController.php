@@ -25,7 +25,7 @@ class EnquiryController extends Controller
         $newEnquiry->message = $request->get('message');
         $newEnquiry->save();
 
-        return $newEnquiry;
+   exit
 
         return redirect(url(route('enquiry-success')));
 
