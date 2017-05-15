@@ -33,6 +33,6 @@ Route::get('/vote-error', function () {
 })->name('vote-error');
 Route::get('/enquiry-success', function () {
     return view('enquiry_success');
-})->name('vote-success');
+})->name('enquiry-success');
 
 
