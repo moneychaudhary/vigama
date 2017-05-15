@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Detail;
 use App\Vote;
+use Goutte\Client;
 use Illuminate\Http\Request;
 
 class VoteController extends Controller
@@ -15,30 +16,31 @@ class VoteController extends Controller
 
         $pin = self::generatePin();
 
-        if (is_null($mobile))
-        {
+        if (is_null($mobile)) {
             return redirect(url(route('welcome')));
         }
 
         $detail = Detail::where('mobile', $mobile)->first();
 
-        if (is_null($detail))
-        {
+        if (is_null($detail)) {
             $detail = new Detail();
-            $detail->mobile=$mobile;
+            $detail->mobile = $mobile;
         }
-        $detail->code=(string)$pin;
+        $detail->code = (string)$pin;
+
+        $scrapper = new Client();
+        $categoryPage = $scrapper->request('GET', 'https://smsapi.24x7sms.com/api_2.0/SendSMS.aspx?APIKEY=ZyU6ttozp4r&MobileNo=8826689422
+&SenderID=VIGAMA&Message=Your verification code is 123456.&ServiceName=TEMPLATE_BASED');
+
         $detail->save();
 
-
-        return 'Code has been sent. -> '.$pin;
+        return 'Code has been sent. -> ' . $pin;
 
     }
 
-    public function vote(Request $request,$id)
+    public function vote(Request $request, $id)
     {
-        if ($id>10 || $id<1)
-        {
+        if ($id > 10 || $id < 1) {
 
             return redirect(url(route('welcome')));
 
@@ -55,33 +57,29 @@ class VoteController extends Controller
         $detail = Detail::where('mobile', $request->get('contact_no'))->first();
 
 
-        if ($request->get('code') != $detail->code )
-        {
+        if ($request->get('code') != $detail->code) {
             return 'Invaild Code';
         }
 
 
+        $vote = Vote::where('mobile', $request->get('contact_no'))->first();
 
-        $vote =Vote::where('mobile', $request->get('contact_no'))->first();
-
-        if(is_null($vote))
-        {
-            $vote =Vote::where('student_no', $request->get('student_no'))->first();
+        if (is_null($vote)) {
+            $vote = Vote::where('student_no', $request->get('student_no'))->first();
 
         }
 
-        if (!is_null($vote))
-        {
+        if (!is_null($vote)) {
             return redirect(url(route('vote-error')));
 
         }
 
-        $vote =  new Vote();
-        $vote->name= $request->get('name');
-        $vote->mobile= $request->get('contact_no');
+        $vote = new Vote();
+        $vote->name = $request->get('name');
+        $vote->mobile = $request->get('contact_no');
 
-        $vote->student_no= $request->get('student_no');
-        $vote->contestant_id= $id;
+        $vote->student_no = $request->get('student_no');
+        $vote->contestant_id = $id;
 
         $vote->save();
 

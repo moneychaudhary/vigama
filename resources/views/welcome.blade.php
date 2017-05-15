@@ -840,7 +840,7 @@
     function sendCode($id)
     {
         var number = $('#contact_no').val();
-        var phoneno = /^\d{10}$/;
+        var phoneno = /^[2-9]{2}\d{8}$/;
         if(number.match(phoneno))
         {
             $('#next').prop('disabled', true);
@@ -890,6 +890,8 @@
 
         // After 3 seconds, remove the show class from DIV
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
     }
 
 
