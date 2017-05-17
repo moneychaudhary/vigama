@@ -15,10 +15,12 @@ class CreateVotesTable extends Migration
     {
         Schema::create('votes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('namespace');
             $table->string('mobile');
             $table->string('student_no');
-            $table->string('contestant_id');
+            $table->string('code')->nullable();
+            $table->boolean('voted')->default(false);
+            $table->unsignedInteger('contestant_id')->nullable();
             $table->timestamps();
         });
     }

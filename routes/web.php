@@ -15,14 +15,15 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('home');
+})->name('home');
 
-Route::post('/enquiry/create','EnquiryController@create')->name('enquiry.create');
+Route::post('/enquiry/create', 'EnquiryController@create')->name('enquiry.create');
 
 
-Route::post('/send-otp/{mobile}','VoteController@sendOtp');
-Route::post('/vote/{id}','VoteController@vote')->name('vote');
+Route::get('/send-otp/{mobile}', 'VoteController@sendOtp');
+
+Route::post('/vote/{id}', 'VoteController@voteIntiate');
 
 Route::get('/vote-success', function () {
     return view('vote_success');
@@ -31,8 +32,13 @@ Route::get('/vote-success', function () {
 Route::get('/vote-error', function () {
     return view('vote_error');
 })->name('vote-error');
+
 Route::get('/enquiry-success', function () {
     return view('enquiry_success');
 })->name('enquiry-success');
+
+Route::get('/vote-submit','VoteController@voteSubmit') ;
+Route::post('/vote-submit/{namespace}','VoteController@create') ;
+
 
 

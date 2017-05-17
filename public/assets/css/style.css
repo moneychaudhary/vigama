@@ -285,7 +285,7 @@ a.read-more:hover {
 .welcome-image-area {
     position: relative;
     height: 100%;
-    
+   
     background-size: cover;
     z-index: 1;
 }
@@ -1011,7 +1011,7 @@ figure.effect-bubba figcaption:after {
 */
 
 .testimonial-area {
-    background: url(../images/bg/testi-bg.jpg);
+    background: url(../images/bg/3.jpg);
     background-size: cover;
     position: relative;
     z-index: 1;
@@ -1620,5 +1620,3 @@ a.call-to-more {
 .main {
     margin-bottom: 180px;
 }
-
-
