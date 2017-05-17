@@ -221,7 +221,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="video-area-text text-center wow bounceIn">
-                    <a href="https://youtu.be/L4RgWRJJFnE" class="video-play mfp-iframe">
+                    <a href="https://youtube.com/watch?v=L4RgWRJJFnE" class="video-play mfp-iframe">
                         <i class="fa fa-play"></i>
                     </a>
                     <h2>Watch Our Video</h2>
