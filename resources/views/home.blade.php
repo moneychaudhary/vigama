@@ -7,11 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Naila One Page Multi Purpose Template">
-    <meta name="keywords"
-          content="Onepageboss, new, html, one page, bootstrap, new html template, design, creative, onepage, clean, modern">
-    <meta name="author" content="Tanvir Rahman Hridoy">
-
+  
     <title>Vigama</title>
     <link rel="shortcut icon" href="u.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
