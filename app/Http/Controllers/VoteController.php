@@ -41,7 +41,7 @@ class VoteController extends Controller
         $res = $client->request('GET', 'https://smsapi.24x7sms.com/api_2.0/SendSMS.aspx', [
             'form_params' => [
                 'apikey'=>"ZyU6ttozp4r",
-                'MobileNo' => '918826689422',
+                'MobileNo' => '91'.$mobile,
                 'SenderId'=>'VIGAMA',
                 'Message' =>'Your verification code is '.$pin.'.',
                 'ServiceName'=>'TEMPLATE_BASED'
