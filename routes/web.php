@@ -15,7 +15,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 })->name('home');
 
 Route::post('/enquiry/create', 'EnquiryController@create')->name('enquiry.create');
