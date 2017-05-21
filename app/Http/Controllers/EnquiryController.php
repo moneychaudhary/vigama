@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enquiry;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class EnquiryController extends Controller
 {
@@ -24,6 +25,12 @@ class EnquiryController extends Controller
         $newEnquiry->email = $request->get('email');
         $newEnquiry->message = $request->get('message');
         $newEnquiry->save();
+
+        Mail::send('email',['enquiry'=>$newEnquiry],function ($message) use ($newEnquiry){
+            $message->to('vigama2k17co@gmail.com');
+            $message->subject('Vigama Enquiry');
+
+        });
 
 
         return redirect(url(route('enquiry-success')));
