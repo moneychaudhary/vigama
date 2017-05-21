@@ -36,7 +36,7 @@
 
                     <div class="logo">
                         <a href="{{url(route('home'))}}">
-                            <p style="font-size: small; color: black" ><strong>VIGAMA<strong></p>
+                            <p style="font-size:20px;color:#5C5C5C; "><strong>VIGAMA</strong></p>
                         </a>
                     </div>
 
