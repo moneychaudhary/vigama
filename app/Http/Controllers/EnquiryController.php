@@ -26,7 +26,7 @@ class EnquiryController extends Controller
         $newEnquiry->message = $request->get('message');
         $newEnquiry->save();
 
-        Mail::send('email',['enquiry'=>$newEnquiry],function ($message) use ($newEnquiry){
+        Mail::send('enquiry_email',['enquiry'=>$newEnquiry],function ($message) use ($newEnquiry){
             $message->to('vigama2k17co@gmail.com');
             $message->subject('Vigama Enquiry');
 
