@@ -8,54 +8,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Naila One Page Multi Purpose Template">
-    <meta name="keywords" content="Onepageboss, new, html, one page, bootstrap, new html template, design, creative, onepage, clean, modern">
-    <meta name="author" content="Tanvir Rahman Hridoy">
 
-    <title>Vigama</title>
+
+    <title>Vigama 2k17</title>
     <link rel="shortcut icon" href="u.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:300,400,500,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/fonts/linear-fonts.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
-    <!-- MAGNIFIC CSS -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/effects.css">
-    <link rel="stylesheet" href="assets/css/animated-text.css">
-    <!-- MAIN STYLE CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- RESPONSIVE CSS -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <!-- COLOR SWITCHER JS -->
-    <link href="assets/switcher/switcher.css" rel="stylesheet">
-    <link href="assets/switcher/style1.css" rel="stylesheet" id="colors">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="cssp/style.css">
     <style>
-        .follow {
-            margin-right: 4%;
-            border-color: #2980b9;
-            color: #2980b9;}
-        .btn1{
-            border-radius:0px!important;
-            width:100px;
-
-
+        .logo {
+            padding-top: 30px;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
         }
-        .team-description{
-            width:280px;}
     </style>
 
 </head>
@@ -72,7 +36,7 @@
 
                     <div class="logo">
                         <a href="{{url(route('home'))}}">
-                            <p >Vigama</p>
+                            <p style="font-size: small; color: black" ><strong>VIGAMA<strong></p>
                         </a>
                     </div>
 
@@ -82,23 +46,16 @@
             </div>
         </div>
     </div>
-    <div class="welcome-image-area" data-stellar-background-ratio="0.6" style="background:url(n.jpg);   background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;">
-        <div class="display-table">
-            <div class="display-table-cell">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="header-text text-center" style="margin-top:250px;">
-                                <p>Congratulations! You have successfully casted your vote.</p>
-                                <a class="slide-btn smoth-scroll" href="{{url(route('home'))}}">Go Back</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+            <br><br> <h2 style="color:#0fad00;padding: 20px;">Congratulations !</h2>
+            <img src="checked.png">
+            <p style="font-size:20px;color:#5C5C5C; padding: 20px">You have successfully voted. Thank you for your participation</p>
+            <a href="{{url(route('home'))}}" class="btn btn-lg btn-success">     Go back     </a>
+            <br><br>
         </div>
-    </div>
 
+    </div>
 </header>
 
 
@@ -107,53 +64,8 @@
 
 
 
-<!-- START FOOTER DESIGN AREA -->
-
-<!-- / END CONTACT DETAILS DESIGN AREA -->
-
-<!-- START SCROOL UP DESIGN AREA -->
-<div class="scroll-to-up">
-    <div class="scrollup">
-        <span class="lnr lnr-chevron-up"></span>
-    </div>
-</div>
-<!-- / END SCROOL UP DESIGN AREA -->
 
 
-
-
-
-<!-- LATEST JQUERY -->
-<script src="assets/js/jquery.min.js"></script>
-<!-- BOOTSTRAP JS -->
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- OWL CAROUSEL JS  -->
-<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
-<!-- MAGNIFICANT JS -->
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<!-- STEALLER JS -->
-<script src="assets/js/jquery.stellar.min.js"></script>
-<!-- YOUTUBE JS -->
-<script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
-<script type="text/javascript">
-    $('.player').mb_YTPlayer();
-</script>
-<!-- COUNTER UP JS -->
-<script src="assets/js/jquery.waypoints.min.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/jquery.appear.js"></script>
-<!-- WOW JS -->
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/animated-text.js"></script>
-<!-- GOOGLE MAP JS -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
-<script src="assets/js/gmap3.min.js"></script>
-<!-- CONTCAT FORM JS -->
-<script src="assets/js/form-contact.js"></script>
-<!-- COLOR SWITCHER -->
-<script src="assets/switcher/switcher.js"></script>
-<!-- scripts js -->
-<script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

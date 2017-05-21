@@ -123,7 +123,7 @@ class VoteController extends Controller
             return redirect(url(route('home')));
         }
 
-        return view('voting_form',compact('vote'));
+        return view('form',compact('vote'));
     }
 
     public function create(Request $request,$namespace)
